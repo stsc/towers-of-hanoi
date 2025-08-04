@@ -1,0 +1,44 @@
+body {
+    background-color:lightgrey;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:25px;
+}
+tr {
+    width:400px;
+}
+.center {
+    margin:auto;
+    width:400px;
+}
+.rings {
+    width:400px;
+    background-color:white;
+    color:white;
+    border:thin solid black;
+}
+.ring_blank {
+    width:400px;
+    background-color:white;
+    color:white;
+    text-align:center;
+}
+.ring_first {
+    width:50px;
+    background-color:grey;
+    text-align:center;
+}
+.ring_second {
+    width:100px;
+    background-color:grey;
+    text-align:center;
+}
+.ring_third {
+    width:200px;
+    background-color:grey;
+    text-align:center;
+}
+.ring_fourth {
+    width:300px;
+    background-color:grey;
+    text-align:center;
+}
