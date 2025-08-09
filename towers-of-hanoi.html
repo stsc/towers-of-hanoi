@@ -42,6 +42,11 @@
     </div>
     <table align="center">
       <tr>
+        <td></td>
+        <td></td>
+        <td align="center"><b><span id="optimum">&nbsp;</span></b></td>
+      </tr>
+      <tr>
         <td align="center"><div id="1" class="rings"><div id="1_inner" class="ring_first">1</div></div></td>
         <td align="center"><div id="5" class="rings"><div id="5_inner" class="ring_blank">0</div></div></td>
         <td align="center"><div id="9" class="rings"><div id="9_inner" class="ring_blank">0</div></div></td>
@@ -144,14 +149,18 @@ function exchange(element, dropon, event) {
         document.getElementById(from_inner).textContent = to_text;
         document.getElementById(to_inner).textContent   = from_text;
 
+        const moves = Number(document.getElementById('moves').textContent) + 1;
+
         if (dropon.id == 9) {
             for (let id = 9; id <= 12; id++) {
                 document.getElementById(id).firstChild.style.backgroundColor = 'darkcyan';
             }
+            if (moves == 15) {
+                document.getElementById('optimum').textContent = 'OPTIMUM';
+            }
         }
 
-        const moves = document.getElementById('moves').textContent;
-        document.getElementById('moves').textContent = Number(moves) + 1;
+        document.getElementById('moves').textContent = moves;
 
         document.getElementById('progress').textContent = dropon.id == 9 ? 'DONE!' : 'SOLVING..';
     }
