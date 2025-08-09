@@ -5,6 +5,6 @@ in HTML/CSS and JavaScript).
 
 The count of rods and disks is fixed, hence this implementation
 probably serves best as an entry point to the whole thematic area.
-With regards to the optimum of moves, 15 are required at least.
+With regards to the optimum of moves, 15 are required at most.
 
 1: https://en.wikipedia.org/wiki/Tower_of_Hanoi
