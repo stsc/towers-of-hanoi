@@ -1,10 +1,12 @@
 towers-of-hanoi
 ===============
 A simple web-based "towers of hanoi"[1] implementation (written
-in HTML/CSS and JavaScript).
+in HTML/CSS and JavaScript).  This implementation uses script.aculo.us[2]
+under the hood to make basic drag & drop happen.
 
 The count of rods and disks is fixed, hence this implementation
 probably serves best as an entry point to the whole thematic area.
 With regards to the optimum of moves, 15 are required at most.
 
 1: https://en.wikipedia.org/wiki/Tower_of_Hanoi
+2: http://script.aculo.us/
