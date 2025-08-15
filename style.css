@@ -6,6 +6,9 @@ body {
 tr {
     width:400px;
 }
+a:link {
+    color:darkblue;
+}
 .center {
     margin:auto;
     width:400px;
