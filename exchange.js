@@ -44,7 +44,8 @@ function exchange(element, dropon, event) {
         }
     }
 
-    if (element.parentNode.id == ring_top && (
+    if (element.parentNode.id == ring_top  &&
+        element.parentNode.id != dropon.id && (
         dropon.id % 4 == 0
           ? document.getElementById(dropon.id).firstChild.className == 'ring_blank'
           : Number(document.getElementById(Number(dropon.id) + 1).firstChild.textContent) > Number(element.textContent))
