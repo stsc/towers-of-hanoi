@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
     background-color:lightgrey;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Open Sans', sans-serif;
     margin:25px;
 }
 tr {
@@ -12,6 +13,9 @@ a:link {
 .center {
     margin:auto;
     width:400px;
+}
+.status {
+    font-family:Arial, Helvetica, sans-serif;
 }
 .rings {
     width:400px;
