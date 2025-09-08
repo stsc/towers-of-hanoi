@@ -49,7 +49,7 @@ function exchange(element, dropon, event) {
         document.getElementById(dropon.id).firstChild.className == 'ring_blank' && (
         dropon.id % 4 == 0
           ? true
-          : Number(document.getElementById(Number(dropon.id) + 1).firstChild.textContent) > Number(element.textContent))
+          : Number(document.getElementById(dropon.id + 1).firstChild.textContent) > Number(element.textContent))
     ) {
         const from_id = element.parentNode.id;
         const to_id   = dropon.id;
