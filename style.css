@@ -14,7 +14,7 @@ a:link {
     margin:auto;
     width:400px;
 }
-.status {
+.keys, .status {
     font-family:Arial, Helvetica, sans-serif;
 }
 .rings {

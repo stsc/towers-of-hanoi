@@ -43,7 +43,7 @@
     </div>
     <table align="center">
       <tr>
-        <td></td>
+        <td><span style="font-size:12px" class="keys"><b>keys</b><br>r: reset</span></td>
         <td></td>
         <td align="center"><b><span id="optimum" class="status">&nbsp;</span></b></td>
       </tr>
@@ -74,6 +74,12 @@
       </tr>
     </table>
   <script>
+
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 82) { // r
+        location.reload();
+    }
+});
 
 new Draggable('1_inner',  { revert: true });
 new Draggable('2_inner',  { revert: true });
