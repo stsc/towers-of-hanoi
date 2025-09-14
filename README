@@ -8,5 +8,8 @@ The count of rods and disks is fixed, hence this implementation
 probably serves best as an entry point to the whole thematic area.
 With regards to the optimum of moves, 15 are required at most.
 
+Caveat: this implementation does not work on devices when a touch
+screen is being used (due to different events being triggered).
+
 1: https://en.wikipedia.org/wiki/Tower_of_Hanoi
 2: http://script.aculo.us/
