@@ -51,6 +51,16 @@ function exchange(element, dropon, event) {
           ? true
           : Number(document.getElementById(Number(dropon.id) + 1).firstChild.textContent) > Number(element.textContent))
     ) {
+        if (element.parentNode.id == 1         &&
+           (dropon.id == 8 || dropon.id == 12) &&
+           !setTimer
+        ) {
+            timerId = setInterval(() => {
+                document.getElementById('timer').textContent = ++secs;
+            }, 1000);
+            setTimer = true;
+        }
+
         const from_id = element.parentNode.id;
         const to_id   = dropon.id;
 
@@ -78,6 +88,7 @@ function exchange(element, dropon, event) {
         const moves = Number(document.getElementById('moves').textContent) + 1;
 
         if (dropon.id == 9) {
+            clearInterval(timerId);
             for (let id = 9; id <= 12; id++) {
                 document.getElementById(id).firstChild.style.backgroundColor = 'darkcyan';
             }
