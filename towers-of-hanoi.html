@@ -43,7 +43,7 @@
     </div>
     <table align="center">
       <tr>
-        <td><span style="font-size:12px" class="keys"><b>keys</b><br>r: reset</span></td>
+        <td><span style="font-size:12px" class="keys"><b>keys</b><br>p: pause/resume<br>r: reset</span></td>
         <td></td>
         <td align="center"><b><span id="optimum" class="status">&nbsp;</span></b></td>
       </tr>
@@ -75,13 +75,38 @@
     </table>
   <script>
 
+let begin = true;
+let end   = false;
+
 let timerId;
 let setTimer = false;
 let secs     = 0;
 
+function update_timer() {
+    document.getElementById('timer').textContent = ++secs;
+}
+
+function pause_resume() {
+    if (setTimer) {
+        clearInterval(timerId);
+        setTimer = false;
+    }
+    else {
+        timerId = setInterval(update_timer, 1000);
+        setTimer = true;
+    }
+}
+
 document.addEventListener('keydown', function(event) {
-    if (event.key == 'r') {
-        location.reload();
+    switch (event.key) {
+        case 'p':
+          if (!end) pause_resume();
+          break;
+        case 'r':
+          location.reload();
+          break;
+        default:
+          break;
     }
 });
 

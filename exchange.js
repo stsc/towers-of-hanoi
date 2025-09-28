@@ -53,13 +53,13 @@ function exchange(element, dropon, event) {
     ) {
         if (element.parentNode.id == 1         &&
            (dropon.id == 8 || dropon.id == 12) &&
-           !setTimer
+            begin && !setTimer
         ) {
-            timerId = setInterval(() => {
-                document.getElementById('timer').textContent = ++secs;
-            }, 1000);
+            timerId = setInterval(update_timer, 1000);
             setTimer = true;
         }
+
+        begin = false;
 
         const from_id = element.parentNode.id;
         const to_id   = dropon.id;
@@ -87,8 +87,13 @@ function exchange(element, dropon, event) {
 
         const moves = Number(document.getElementById('moves').textContent) + 1;
 
-        if (dropon.id == 9) {
-            clearInterval(timerId);
+        end = dropon.id == 9;
+
+        if (end) {
+            if (setTimer) {
+                clearInterval(timerId);
+                setTimer = false;
+            }
             for (let id = 9; id <= 12; id++) {
                 document.getElementById(id).firstChild.style.backgroundColor = 'darkcyan';
             }
@@ -99,6 +104,6 @@ function exchange(element, dropon, event) {
 
         document.getElementById('moves').textContent = moves;
 
-        document.getElementById('progress').textContent = dropon.id == 9 ? 'DONE!' : 'SOLVING..';
+        document.getElementById('progress').textContent = end ? 'DONE!' : 'SOLVING..';
     }
 }
