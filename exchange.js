@@ -76,7 +76,7 @@ function exchange(element, dropon, event) {
         if (move) {
             to_inner = to_pos + '_inner';
             to_class = 'ring_blank';
-            to_text  = '0';
+            to_text  = '';
         }
 
         document.getElementById(from_inner).className = to_class;

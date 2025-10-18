@@ -28,6 +28,7 @@ a:link {
 }
 .rings {
     width:400px;
+    height:22px;
     background-color:white;
     color:white;
     border:thin solid black;
@@ -35,7 +36,6 @@ a:link {
 .ring_blank {
     width:400px;
     background-color:white;
-    color:white;
     text-align:center;
 }
 .ring_first {
